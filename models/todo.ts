@@ -15,6 +15,10 @@ const todoSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const todo = mongoose.model("todo", todoSchema);
+// const todo = mongoose.model("todo", todoSchema);
+
+// create todo model if it doesn't exist
+
+const todo = mongoose.models.todo || mongoose.model("todo", todoSchema);
 
 export { todo };
