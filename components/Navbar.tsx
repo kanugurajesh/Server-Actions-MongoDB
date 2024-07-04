@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="p-8">
+    <div className={`${width > 850 && "p-8"}`}>
       {width > 850 ? (
         <nav className="flex items-center justify-between">
           <Link

@@ -7,7 +7,7 @@ import { useState } from "react";
 const NavbarMobile = () => {
   const [click, setClick] = useState(false);
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="flex items-center justify-between relative">
       <div>
         <Link
           href="/"
@@ -23,6 +23,9 @@ const NavbarMobile = () => {
           <li className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${click && "bg-white"}`}></li>
           <li className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${click && "rotate-[48deg] origin-[25px_6px]"}`}></li>
         </ul>
+      </div>
+      <div className="absolute w-16 h-screen bg-black">
+
       </div>
     </nav>
   );
