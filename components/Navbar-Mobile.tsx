@@ -37,32 +37,16 @@ const NavbarMobile = () => {
         </ul>
       </div>
       <div
-        className={`absolute w-48 top-0 h-full bg-black left-[-200px] ${
+        className={`absolute w-48 top-0 h-full bg-black left-[-200px] p-10 ${
           click && "left-[0px]"
         } transition-all ease-in-out duration-300`}
       >
-        <ul>
-          <li className="relative group">
-            <Link href="/">Home</Link>
-            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
-          </li>
-          <li className="relative group">
-            <Link href="/About">About Us</Link>
-            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
-          </li>
-          <li className="relative group">
-            <Link
-              href="https://github.com/kanugurajesh/Server-Actions-MongoDB"
-              target="_blank"
-            >
-              Github
-            </Link>
-            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
-          </li>
-          <li className="relative group">
-            <Link href="/">Contact</Link>
-            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
-          </li>
+        <ul className="text-white font-medium text-lg flex flex-col gap-5">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Github</li>
+          <li>Contact</li>
+          <li>Get Started</li>
         </ul>
       </div>
     </nav>
