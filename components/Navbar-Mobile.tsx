@@ -7,7 +7,7 @@ import { useState } from "react";
 const NavbarMobile = () => {
   const [click, setClick] = useState(false);
   return (
-    <nav className={`flex justify-between px-8 pt-8`}>
+    <nav className={`flex items-center justify-between px-8 pt-8`}>
       <div>
         <Link
           href="/"
