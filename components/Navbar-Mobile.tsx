@@ -42,11 +42,28 @@ const NavbarMobile = () => {
         } transition-all ease-in-out duration-300`}
       >
         <ul className="text-white font-medium text-lg flex flex-col gap-5">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Github</li>
-          <li>Contact</li>
-          <li>Get Started</li>
+          <li className="group">
+            <Link href="/">Home</Link>
+            <div className="h-1 bg-white w-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+          <li className="group">
+            <Link href="/About">About Us</Link>
+            <div className="h-1 bg-white w-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+          <li className="group">
+            <Link href="https://github.com/kanugurajesh/Server-Actions-MongoDB">
+              Github
+            </Link>
+            <div className="h-1 bg-white w-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+          <li className="group">
+            <Link href="/Contact">Contact</Link>
+            <div className="h-1 bg-white w-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+          <li className="group">
+            <Link href="/">Get Started</Link>
+            <div className="h-1 bg-white w-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
         </ul>
       </div>
     </nav>
