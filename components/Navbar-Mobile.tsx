@@ -7,7 +7,7 @@ import { useState } from "react";
 const NavbarMobile = () => {
   const [click, setClick] = useState(false);
   return (
-    <nav className="flex items-center justify-between relative">
+    <nav className={`flex justify-between px-8 pt-8`}>
       <div>
         <Link
           href="/"
@@ -19,13 +19,51 @@ const NavbarMobile = () => {
       </div>
       <div>
         <ul className="flex flex-col gap-1" onClick={() => setClick(!click)}>
-          <li className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${click && "-rotate-45 origin-top-right"}`}></li>
-          <li className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${click && "bg-white"}`}></li>
-          <li className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${click && "rotate-[48deg] origin-[25px_6px]"}`}></li>
+          <li
+            className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${
+              click && "-rotate-45 origin-top-right"
+            }`}
+          ></li>
+          <li
+            className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${
+              click && "bg-white"
+            }`}
+          ></li>
+          <li
+            className={`bg-black w-8 h-1 transition-all ease-in-out duration-300 ${
+              click && "rotate-[48deg] origin-[25px_6px]"
+            }`}
+          ></li>
         </ul>
       </div>
-      <div className="absolute w-16 h-screen bg-black">
-
+      <div
+        className={`absolute w-48 top-0 h-full bg-black left-[-200px] ${
+          click && "left-[0px]"
+        } transition-all ease-in-out duration-300`}
+      >
+        <ul>
+          <li className="relative group">
+            <Link href="/">Home</Link>
+            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+          <li className="relative group">
+            <Link href="/About">About Us</Link>
+            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+          <li className="relative group">
+            <Link
+              href="https://github.com/kanugurajesh/Server-Actions-MongoDB"
+              target="_blank"
+            >
+              Github
+            </Link>
+            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+          <li className="relative group">
+            <Link href="/">Contact</Link>
+            <div className="absolute bottom-[-3px] h-1 bg-black w-0 left-0 group-hover:w-full transition-all ease-in-out duration-300"></div>
+          </li>
+        </ul>
       </div>
     </nav>
   );

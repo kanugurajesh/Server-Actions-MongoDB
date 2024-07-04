@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <script async defer src="https://buttons.github.io/buttons.js"></script>
-      <body className={inter.className}>
-        <Navbar />
-        <UserProvider>{children}</UserProvider>
+      <body className={`${inter.className} relative`}>
+        <UserProvider>
+          <Navbar />
+          {children}
+        </UserProvider>
       </body>
     </html>
   );
